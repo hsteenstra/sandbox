@@ -701,3 +701,130 @@ select#examples:hover { border-color: var(--accent); }
 #ai-input:focus { border-color: var(--accent); }
 .ai-form .btn-primary { background: var(--accent); color: #fff; box-shadow: none; padding: 9px 18px; }
 .ai-form .btn-primary:hover { background: var(--accent-dark); transform: none; }
+v/* =========================
+   HERO — FORCE OVERRIDE
+========================= */
+
+.hero-band {
+  position: relative !important;
+  overflow: hidden !important;
+  background: #7497af !important;
+  color: white !important;
+  padding: 90px 24px 120px !important;
+}
+
+.hero-inner {
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.eyebrow {
+  display: inline-block !important;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 9px 18px !important;
+  border-radius: 999px !important;
+  margin-bottom: 25px !important;
+}
+
+.hero-inner h1 {
+  font-family: "Fredoka", sans-serif !important;
+  font-size: clamp(56px, 8vw, 100px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -3px !important;
+  margin: 0 auto 30px !important;
+  max-width: 1000px !important;
+  color: white !important;
+}
+
+.hero-inner h1 .highlight {
+  display: inline-block !important;
+  color: #7497af !important;
+  background: white !important;
+  padding: 0 20px 8px !important;
+  border-radius: 20px !important;
+  transform: rotate(-2deg) !important;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+.hero-inner p {
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+.hero-inner p a {
+  color: white !important;
+}
+
+.hero-inner p strong {
+  font-weight: 800 !important;
+}
+
+.hero-band::before {
+  content: "" !important;
+  position: absolute !important;
+  width: 420px !important;
+  height: 420px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  top: -220px !important;
+  left: -120px !important;
+}
+
+.hero-band::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 300px !important;
+  height: 300px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  right: -100px !important;
+  bottom: -150px !important;
+}
+
+.hero-wave {
+  position: absolute !important;
+  bottom: -1px !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 70px !important;
+  z-index: 20 !important;
+}
+
+.hero-wave path {
+  fill: white !important;
+}
+
+@media (max-width: 700px) {
+  .hero-band {
+    padding: 65px 20px 100px !important;
+  }
+
+  .hero-inner h1 {
+    font-size: clamp(48px, 14vw, 70px) !important;
+    letter-spacing: -2px !important;
+  }
+
+  .hero-inner h1 .highlight {
+    padding: 0 12px 5px !important;
+    border-radius: 14px !important;
+  }
+
+  .hero-inner p {
+    font-size: 17px !important;
+  }
+}
