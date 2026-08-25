@@ -701,6 +701,9 @@ select#examples:hover { border-color: var(--accent); }
 #ai-input:focus { border-color: var(--accent); }
 .ai-form .btn-primary { background: var(--accent); color: #fff; box-shadow: none; padding: 9px 18px; }
 .ai-form .btn-primary:hover { background: var(--accent-dark); transform: none; }
+
+
+
 /* ==========================================
    ✦ NEW CODEFORME HERO ✦
    ========================================== */
