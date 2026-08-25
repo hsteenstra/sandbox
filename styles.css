@@ -33,6 +33,11 @@
   --font-display: 'Fredoka', var(--font-ui);
   --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
 }
+.logo-image {
+  height: 42px;
+  width: auto;
+  display: block;
+}
 
 * { box-sizing: border-box; }
 
