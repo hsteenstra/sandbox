@@ -654,6 +654,50 @@ select#examples:hover { border-color: var(--accent); }
   font-size: 0.86rem;
   outline: none;
 }
+.bath-banner {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.bath-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.bath-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.45)
+  );
+  color: white;
+}
+
+.bath-overlay h2 {
+  margin: 0 0 8px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 2.2rem;
+}
+
+.bath-overlay p {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.05rem;
+}
 #ai-input:focus { border-color: var(--accent); }
 .ai-form .btn-primary { background: var(--accent); color: #fff; box-shadow: none; padding: 9px 18px; }
 .ai-form .btn-primary:hover { background: var(--accent-dark); transform: none; }
