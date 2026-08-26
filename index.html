@@ -3,32 +3,186 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <title>CodeForMe — Python Sandbox</title>
-<meta name="description" content="Write and run real Python in your browser. Draw, build tiny games, and ask Byte for help — brought to you by CodeForMe." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%237497af%22/><text x=%2250%22 y=%2266%22 font-size=%2252%22 font-family=%22monospace%22 fill=%22white%22 text-anchor=%22middle%22>&lt;/&gt;</text></svg>" />
+
+<meta
+  name="description"
+  content="Write and run real Python in your browser. Draw, build tiny games, and ask Byte for help — brought to you by CodeForMe."
+/>
+
+<!-- BYTE IS NOW THE WEBSITE TAB ICON -->
+<link rel="icon" type="image/png" href="byte.png" />
+<link rel="apple-touch-icon" href="byte.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+  rel="stylesheet"
+>
 
 <link rel="stylesheet" href="styles.css" />
+
+<!-- BYTE / LOGO STYLES -->
+<style>
+  /* =========================================
+     CODEFORME + BYTE LOGO
+  ========================================== */
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .logo-byte {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+  }
+
+
+  /* =========================================
+     BYTE FLOATING BUTTON
+  ========================================== */
+
+  #ai-fab {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .ai-fab-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ai-fab-icon img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+  }
+
+
+  /* =========================================
+     BYTE CHAT AVATAR
+  ========================================== */
+
+  .ai-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #f4f8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .ai-avatar img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+  }
+
+
+  /* =========================================
+     FOOTER LOGO
+  ========================================== */
+
+  .footer-logo-byte {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+
+  /* =========================================
+     SMALLER SCREENS
+  ========================================== */
+
+  @media (max-width: 600px) {
+    .logo-byte {
+      width: 32px;
+      height: 32px;
+    }
+
+    .ai-fab-icon,
+    .ai-fab-icon img {
+      width: 38px;
+      height: 38px;
+    }
+  }
+</style>
+
 </head>
+
 <body>
+
+<!-- =========================================
+     HEADER
+========================================== -->
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="https://codeforme.org" target="_blank" rel="noopener">
-  <span class="logo-mark">&lt;/&gt;</span> CodeForMe
-</a>
+
+    <a
+      class="logo"
+      href="https://codeforme.org"
+      target="_blank"
+      rel="noopener"
+      aria-label="CodeForMe"
+    >
+      <img
+        class="logo-byte"
+        src="byte.png"
+        alt="Byte, the CodeForMe robot"
+      >
+      <span>CodeForMe</span>
+    </a>
 
     <nav class="site-nav">
-      <a href="https://codeforme.org" target="_blank" rel="noopener">Website</a>
-      <a class="btn-newsletter" href="https://forms.gle/Jzu6GZwEvmR7KT4s9" target="_blank" rel="noopener">Join the newsletter</a>
+      <a
+        href="https://codeforme.org"
+        target="_blank"
+        rel="noopener"
+      >
+        Website
+      </a>
+
+      <a
+        class="btn-newsletter"
+        href="https://forms.gle/Jzu6GZwEvmR7KT4s9"
+        target="_blank"
+        rel="noopener"
+      >
+        Join the newsletter
+      </a>
     </nav>
+
   </div>
 </header>
 
+
+<!-- =========================================
+     HERO
+========================================== -->
+
 <div class="hero-band">
+
   <div class="hero-decoration code-left">&lt;/&gt;</div>
   <div class="hero-decoration code-right">{ }</div>
 
@@ -52,28 +206,56 @@
     <div class="hero-credit">
       <span>Made for students</span>
       <span class="credit-line"></span>
-      <a href="https://codeforme.org" target="_blank" rel="noopener">
+
+      <a
+        href="https://codeforme.org"
+        target="_blank"
+        rel="noopener"
+      >
         by CodeForME
       </a>
     </div>
 
   </div>
 
-  <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,45 C180,85 330,5 520,35 C710,65 850,75 1030,35 C1190,0 1310,20 1440,50 L1440,80 L0,80 Z"></path>
+  <svg
+    class="hero-wave"
+    viewBox="0 0 1440 80"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+  >
+    <path
+      d="M0,45 C180,85 330,5 520,35 C710,65 850,75 1030,35 C1190,0 1310,20 1440,50 L1440,80 L0,80 Z"
+    ></path>
   </svg>
+
 </div>
 
+
+<!-- =========================================
+     MAIN
+========================================== -->
+
 <main>
-  <section class="sandbox" aria-label="Python sandbox">
+
+  <section
+    class="sandbox"
+    aria-label="Python sandbox"
+  >
+
+    <!-- EDITOR -->
 
     <div class="panel editor-panel">
+
       <div class="panel-header">
+
         <span class="panel-title">
           <span class="dot"></span>
           main.py
         </span>
+
         <div class="panel-actions">
+
           <select id="examples">
             <option value="">Load example…</option>
             <option value="hello">Hello, world</option>
@@ -81,92 +263,320 @@
             <option value="drawing">Drawing shapes</option>
             <option value="game">Tiny game (arrow keys)</option>
           </select>
-          <button id="reset-btn" class="btn-ghost" title="Reset editor">Reset</button>
-          <button id="run-btn" class="btn-primary" disabled>Run</button>
+
+          <button
+            id="reset-btn"
+            class="btn-ghost"
+            title="Reset editor"
+          >
+            Reset
+          </button>
+
+          <button
+            id="run-btn"
+            class="btn-primary"
+            disabled
+          >
+            Run
+          </button>
+
         </div>
+
       </div>
+
       <div class="editor-wrap">
-        <div id="gutter" aria-hidden="true">1</div>
-        <textarea id="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+
+        <div
+          id="gutter"
+          aria-hidden="true"
+        >
+          1
+        </div>
+
+        <textarea
+          id="code-editor"
+          spellcheck="false"
+          autocapitalize="off"
+          autocomplete="off"
+        ></textarea>
+
       </div>
+
     </div>
+
+
+    <!-- OUTPUT -->
 
     <div class="panel output-panel">
+
       <div class="panel-header">
+
         <div class="tabs">
-          <button class="tab-btn active" data-tab="console">Console</button>
-          <button class="tab-btn" data-tab="canvas">Canvas</button>
+
+          <button
+            class="tab-btn active"
+            data-tab="console"
+          >
+            Console
+          </button>
+
+          <button
+            class="tab-btn"
+            data-tab="canvas"
+          >
+            Canvas
+          </button>
+
         </div>
-        <span id="status" class="status">Loading Python…</span>
+
+        <span
+          id="status"
+          class="status"
+        >
+          Loading Python…
+        </span>
+
       </div>
+
       <div class="tab-content">
-        <pre id="console-output" class="tab-pane active"><span class="muted">Output will show up here when you hit Run.</span></pre>
-        <div id="canvas-pane" class="tab-pane">
-          <canvas id="sandbox-canvas" width="640" height="420"></canvas>
+
+        <pre
+          id="console-output"
+          class="tab-pane active"
+        ><span class="muted">Output will show up here when you hit Run.</span></pre>
+
+        <div
+          id="canvas-pane"
+          class="tab-pane"
+        >
+          <canvas
+            id="sandbox-canvas"
+            width="640"
+            height="420"
+          ></canvas>
         </div>
+
         <div id="loading-overlay">
+
           <div class="spinner"></div>
+
           <p>Booting the Python runtime…</p>
-          <p class="muted small">First load can take a few seconds.</p>
+
+          <p class="muted small">
+            First load can take a few seconds.
+          </p>
+
         </div>
+
       </div>
+
     </div>
 
   </section>
+
+
+  <!-- =========================================
+       BYTE CALLOUT
+  ========================================== -->
 
   <section class="callout">
+
     <div>
+
       <h2>Stuck on something?</h2>
-      <p>Byte lives in the corner of your screen and can point you in the right direction — no context switching needed.</p>
+
+      <p>
+        Byte lives in the corner of your screen and can point you
+        in the right direction — no context switching needed.
+      </p>
+
     </div>
-    <button id="open-ai-from-callout" class="btn-primary btn-callout">Ask Byte a question</button>
+
+    <button
+      id="open-ai-from-callout"
+      class="btn-primary btn-callout"
+    >
+      Ask Byte a question
+    </button>
+
   </section>
+
 </main>
 
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
 <footer class="site-footer">
+
   <div class="footer-inner">
+
     <div class="footer-brand">
-      <span class="logo-mark">&lt;/&gt;</span> CodeForMe
-      <p>Free tools and resources for people learning to code.</p>
+
+      <img
+        class="footer-logo-byte"
+        src="byte.png"
+        alt=""
+      >
+
+      <strong>CodeForMe</strong>
+
+      <p>
+        Free tools and resources for people learning to code.
+      </p>
+
     </div>
+
     <div class="footer-links">
-      <a href="https://codeforme.org" target="_blank" rel="noopener">codeforme.org</a>
-      <a href="https://forms.gle/Jzu6GZwEvmR7KT4s9" target="_blank" rel="noopener">Newsletter</a>
+
+      <a
+        href="https://codeforme.org"
+        target="_blank"
+        rel="noopener"
+      >
+        codeforme.org
+      </a>
+
+      <a
+        href="https://forms.gle/Jzu6GZwEvmR7KT4s9"
+        target="_blank"
+        rel="noopener"
+      >
+        Newsletter
+      </a>
+
     </div>
+
   </div>
+
 </footer>
 
-<button id="ai-fab" aria-label="Open Byte chat">
-  <span class="ai-fab-icon">B</span>
-  <span class="ai-fab-label">Ask Byte</span>
+
+<!-- =========================================
+     BYTE FLOATING BUTTON
+========================================== -->
+
+<button
+  id="ai-fab"
+  aria-label="Open Byte chat"
+>
+
+  <span class="ai-fab-icon">
+    <img
+      src="byte.png"
+      alt=""
+    >
+  </span>
+
+  <span class="ai-fab-label">
+    Ask Byte
+  </span>
+
 </button>
 
-<div id="ai-panel" class="ai-panel" aria-hidden="true">
+
+<!-- =========================================
+     BYTE CHAT PANEL
+========================================== -->
+
+<div
+  id="ai-panel"
+  class="ai-panel"
+  aria-hidden="true"
+>
+
   <div class="ai-panel-header">
+
     <div class="ai-panel-title">
-      <span class="ai-avatar">B</span>
+
+      <span class="ai-avatar">
+        <img
+          src="byte.png"
+          alt="Byte"
+        >
+      </span>
+
       <span>
         <strong>Byte</strong>
-        <span class="ai-subtitle">Sandbox assistant · demo mode</span>
+
+        <span class="ai-subtitle">
+          Sandbox assistant · demo mode
+        </span>
       </span>
+
     </div>
-    <button id="ai-close" aria-label="Close chat">✕</button>
+
+    <button
+      id="ai-close"
+      aria-label="Close chat"
+    >
+      ✕
+    </button>
+
   </div>
-  <div id="ai-messages" class="ai-messages"></div>
-  <form id="ai-form" class="ai-form">
-    <input id="ai-input" type="text" placeholder="Ask about a Python error, an idea for a game…" autocomplete="off" />
-    <button type="submit" class="btn-primary">Send</button>
+
+  <div
+    id="ai-messages"
+    class="ai-messages"
+  ></div>
+
+  <form
+    id="ai-form"
+    class="ai-form"
+  >
+
+    <input
+      id="ai-input"
+      type="text"
+      placeholder="Ask about a Python error, an idea for a game…"
+      autocomplete="off"
+    />
+
+    <button
+      type="submit"
+      class="btn-primary"
+    >
+      Send
+    </button>
+
   </form>
+
 </div>
+
+
+<!-- =========================================
+     SCRIPTS
+========================================== -->
 
 <script src="https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.js"></script>
 <script src="app.js"></script>
-  <section class="bath-banner">
-  <img src="bathmaine2.jpg" alt="Bath, Maine" />
+
+
+<!-- =========================================
+     BATH, MAINE BANNER
+========================================== -->
+
+<section class="bath-banner">
+
+  <img
+    src="bathmaine2.jpg"
+    alt="Bath, Maine"
+  >
+
   <div class="bath-overlay">
-    <h2>Built in Bath, Maine.</h2>
-    <p>Empowering Maine's Youth One Line at a Time</p>
+
+    <h2>
+      Built in Bath, Maine.
+    </h2>
+
+    <p>
+      Empowering Maine's Youth One Line at a Time
+    </p>
+
   </div>
+
 </section>
+
 </body>
 </html>
